@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#edf3e9">
+<title>李玉森｜個人電子名片</title>
+<style>
+:root{--green:#496b50;--deep:#304a36;--light:#edf3e9;--gold:#b99a69;--paper:#fffefa}
+*{box-sizing:border-box}
+body{margin:0;padding:24px 12px;background:var(--light);color:#344438;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif}
+.card{max-width:560px;margin:auto;background:var(--paper);border-radius:22px;overflow:hidden;box-shadow:0 16px 45px rgba(48,74,54,.13)}
+.accent{height:7px;background:linear-gradient(90deg,var(--green),#c5aa7d,var(--green))}
+.hero{text-align:center;padding:38px 22px 30px;background:linear-gradient(145deg,#e8f0e4,#f8f7ef)}
+.heart{font-size:23px;color:#d58c80}.brand{font:25px Georgia,serif;letter-spacing:5px;color:#30352e;margin-top:5px}
+.rule{height:2px;width:52px;background:var(--gold);margin:21px auto}
+.name{font-size:35px;letter-spacing:7px;font-weight:650;color:var(--deep);margin:0}
+.role{font-size:16px;letter-spacing:2px;color:#67806a;margin-top:12px}
+.company{font-size:13px;color:#858d80;margin-top:10px}
+.motto{font:italic 15px Georgia,serif;color:#83947e;letter-spacing:1.5px;margin-top:24px}
+.section{padding:24px 26px}.section-title{color:var(--green);font-size:14px;letter-spacing:2px;border-bottom:1px solid #e6eadf;padding-bottom:12px;margin:0 0 14px}
+.contact-row{display:flex;align-items:center;gap:13px;padding:12px 0;border-bottom:1px solid #f0f1eb}
+.symbol{width:40px;height:40px;flex:0 0 40px;border-radius:50%;background:#edf3e9;color:var(--green);display:grid;place-items:center;font-size:18px}
+.info{min-width:0;flex:1}.label{font-size:11px;color:#999f92;letter-spacing:1px;margin-bottom:4px}
+.value{font-size:14px;color:#3c5140;overflow-wrap:anywhere}a{color:inherit;text-decoration:none}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:21px}
+.btn{display:flex;justify-content:center;align-items:center;min-height:45px;padding:11px 8px;border:0;border-radius:28px;background:var(--green);color:white;font-size:13px;font-weight:600;text-align:center;cursor:pointer}
+.btn.gold{background:var(--gold)}.btn.soft{background:#edf3e9;color:var(--green)}
+.profile{background:#f5f7f1;padding:24px 26px}.profile p{font-size:14px;line-height:2;color:#667367;margin:0}
+.qr-section{text-align:center;padding:26px 18px 29px}.qr-placeholder{display:inline-grid;place-items:center;width:180px;height:180px;padding:14px;border:1px solid #e6e9df;border-radius:12px;background:#fff;color:#71816f;font-size:13px;line-height:1.7}
+.qr-hint{font-size:12px;line-height:1.8;color:#92998d;margin:12px 0 0}
+.qr-note{max-width:350px;margin:10px auto 0;color:#8b806c;font-size:11px;line-height:1.7}
+.footer{text-align:center;background:#eaf1e7;padding:22px;color:#68806a;font-size:12px;letter-spacing:2px;line-height:2}
+@media(max-width:420px){body{padding:10px 7px}.card{border-radius:17px}.hero{padding:32px 17px 25px}.name{font-size:30px;letter-spacing:5px}.section,.profile{padding:21px 18px}}
+</style>
+</head>
+<body>
+<main class="card">
+<div class="accent"></div>
+<header class="hero">
+  <div class="heart" aria-hidden="true">♥</div>
+  <div class="brand">MARY KAY</div>
+  <div class="rule"></div>
+  <h1 class="name">李玉森</h1>
+  <div class="role">高級銷售教育經理</div>
+  <div class="company">玫琳凱（中國）有限公司</div>
+  <div class="motto">專業・分享・成長・美好</div>
+</header>
+<section class="section">
+<h2 class="section-title">PERSONAL CONTACT｜個人聯絡</h2>
+<div class="contact-row"><div class="symbol">☎</div><div class="info"><div class="label">手機 MOBILE</div><div class="value"><a href="tel:+8618521321168">+86 185 2132 1168</a></div></div></div>
+<div class="contact-row"><div class="symbol">✉</div><div class="info"><div class="label">電子郵件 EMAIL</div><div class="value"><a href="mailto:Steven.Li@mkcorp.com">Steven.Li@mkcorp.com</a></div></div></div>
+<div class="contact-row"><div class="symbol">☎</div><div class="info"><div class="label">公司電話 OFFICE</div><div class="value"><a href="tel:+8622088888">021-2208 8888</a></div></div></div>
+<div class="contact-row"><div class="symbol">☎</div><div class="info"><div class="label">直線電話 DIRECT</div><div class="value"><a href="tel:+8622084109">021-2208 4109</a></div></div></div>
+<div class="contact-row"><div class="symbol">⌖</div><div class="info"><div class="label">上海行政中心 ADDRESS</div><div class="value">上海市安遠路 555 號 1–8 樓，郵編 200040</div></div></div>
+<div class="actions">
+<button class="btn" type="button" onclick="saveContact()">♡ 儲存聯絡人</button>
+<a class="btn gold" href="tel:+8618521321168">☎ 立即撥打</a>
+<a class="btn soft" href="mailto:Steven.Li@mkcorp.com">✉ 寄送郵件</a>
+<a class="btn soft" href="https://www.marykay.com.cn/" target="_blank" rel="noopener">◇ 官方網站</a>
+</div>
+</section>
+<section class="profile">
+<h2 class="section-title">PROFESSIONAL PROFILE｜專業簡介</h2>
+<p>專注銷售教育與專業培訓，分享美容知識與服務經驗，協助人才成長，讓專業創造價值，讓分享成就美好。</p>
+</section>
+<section class="qr-section">
+<h2 class="section-title">MY DIGITAL CARD｜我的電子名片</h2>
+<div id="qrcode" class="qr-placeholder">QR Code 將在<br>網頁上線後產生</div>
+<p class="qr-hint">掃描 QR Code，快速開啟我的個人電子名片</p>
+<p class="qr-note">正式分享前，請先將 HTML 上傳至公開 HTTPS 網址。QR Code 需要網路連線載入產生程式，並會使用目前頁面網址。</p>
+<div class="actions" style="max-width:330px;margin:17px auto 0">
+<button class="btn soft" type="button" onclick="shareCard()">分享電子名片</button>
+<button class="btn soft" type="button" onclick="copyLink()">複製名片網址</button>
+</div>
+</section>
+<footer class="footer">MARY KAY ・ BETTER ME<br>分享美更美</footer>
+</main>
+<script>
+function saveContact(){
+ const vcard=["BEGIN:VCARD","VERSION:3.0","FN:李玉森","ORG:玫琳凱（中國）有限公司","TITLE:高級銷售教育經理","TEL;TYPE=CELL:+8618521321168","TEL;TYPE=WORK:+8622088888","TEL;TYPE=WORK:+8622084109","EMAIL:Steven.Li@mkcorp.com","URL:https://www.marykay.com.cn/","ADR;TYPE=WORK:;;安遠路555號1-8樓;上海;;;中國","END:VCARD"].join("\r\n");
+ const blob=new Blob([vcard],{type:"text/vcard;charset=utf-8"}),url=URL.createObjectURL(blob),a=document.createElement("a");
+ a.href=url;a.download="李玉森_電子名片.vcf";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);
+}
+function copyLink(){
+ const url=location.href;
+ if(navigator.clipboard&&isSecureContext){navigator.clipboard.writeText(url).then(()=>alert("名片網址已複製")).catch(()=>prompt("請複製名片網址：",url));}
+ else{prompt("請複製名片網址：",url);}
+}
+async function shareCard(){
+ const data={title:"李玉森｜個人電子名片",text:"李玉森｜高級銷售教育經理",url:location.href};
+ if(navigator.share){try{await navigator.share(data)}catch(e){}}
+ else{copyLink()}
+}
+// QR library is optional: the page and contact buttons remain usable if offline.
+(function(){
+ const s=document.createElement("script");
+ s.src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js";
+ s.onload=function(){
+   const el=document.getElementById("qrcode");el.className="";
+   el.innerHTML="";
+   new QRCode(el,{text:location.href,width:180,height:180,correctLevel:QRCode.CorrectLevel.H});
+ };
+ s.onerror=function(){document.getElementById("qrcode").textContent="目前離線，QR Code 暫時無法產生";};
+ document.head.appendChild(s);
+})();
+</script>
+</body>
+</html>
